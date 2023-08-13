@@ -4,7 +4,7 @@ Introduction
 [![Hits](https://hits.sh/github.com/farukalpay/Epsilon-Delta-Definiton-Simulation/tree/main.svg)](https://hits.sh/github.com/farukalpay/Epsilon-Delta-Definiton-Simulation/tree/main/)
 
 $$\
-\forall \varepsilon > 0 \quad \exists \delta > 0 \quad 0 < |x - c| < \delta \Rightarrow |f(x) - L| < \varepsilon
+\forall \varepsilon > 0, \exists \delta > 0 : 0 < |x - c| < \delta \Rightarrow |f(x) - L| < \varepsilon
 \$$
 
 <p align="middle" width="100%">
