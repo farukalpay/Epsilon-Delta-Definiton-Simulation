@@ -1,7 +1,9 @@
 # Epsilon-Delta-Definiton-Simulation
 This project provides a visual simulation of the epsilon-delta ratio. Its purpose is to illustrate how the values of a function approach a specific limit point. 
 
-![](https://github.com/farukalpay/Epsilon-Delta-Ratio-Simulation/blob/main/image.png)
+This simulation demonstrates the existence of the limit $\( \lim_{{x \to 2}} f(x) = 4 \)$ for the function $\( f(x) = x^2 \)$. As observed, when $\( L = 5 \)$, the rectangle we form using $\( L + \epsilon \)$, $\( L - \epsilon \)$ for $\( x \)$, and $\( x + \delta \)$, $\( x - \delta \)$ for $\( y \)$ values does not always contains the red point which is $L\$. This illustrates that for any chosen values of $\( \epsilon > 0\)$ there exist $\( \delta > 0\)$ such that $\( 0 < |f(x) - L| < \epsilon \)$ whenever $\( 0 < |x - c| < \delta \)$ 
+![](https://github.com/farukalpay/Epsilon-Delta-Ratio-Simulation/blob/main/images/1.png)
+![](https://github.com/farukalpay/Epsilon-Delta-Ratio-Simulation/blob/main/images/2.png)
 
 Introduction
 ---
