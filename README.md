@@ -6,7 +6,7 @@ This project provides a visual simulation of the epsilon-delta ratio. Its purpos
 Introduction
 ---
 $$\
-\forall \varepsilon > 0 \quad \exists \delta > 0 \quad 0 < |x - c| < \delta \Rightarrow |f(x) - L| < \varepsilon.
+\forall \varepsilon > 0 \quad \exists \delta > 0 \quad 0 < |x - c| < \delta \Rightarrow |f(x) - L| < \varepsilon
 \$$
 
 <p align="middle" width="100%">
@@ -63,4 +63,14 @@ for delta in delta_values:
     
     plt.fill_between(x_range, f(x_limit) - epsilon, f(x_limit) + epsilon, color=color, alpha=0.2, label=label)
 ```
-`for delta in delta_values` This loop iterates through the range of delta values defined earlier. For each delta value, it will create a delta-epsilon band around the limit point. `x_range = np.linspace(x_limit - delta, x_limit + delta, 400)` This line creates an array $x_{\text{range}}\$ of x values that define a range around the limit point $x_{\text{limit}}\$ (which is 2 in our code) within the interval $\[x_{\text{limit}} - \delta  ,  x_{\text{limit}} + \delta]\$ This array is used to determine the x values over which the delta-epsilon band will be plotted. $x_{\text{limit}} - \delta\$ represents the lower bound of the interval. It subtracts the delta value from the limit point, creating the starting point of the range. $x_{\text{limit}} + \delta\$ represents the upper bound of the interval. It adds the delta value to the limit point, creating the ending point of the range. `epsilon = max(abs(f(x_range) - f(x_limit)))` This line calculates the maximum difference $\epsilon$ between the function values within the $x_{\text{range}}\$ and the function value at the limit point $x_{\text{limit}}\$ This calculated value of $\epsilon$ represents the vertical range of the delta-epsilon band that we're plotting around the limit point.
+`for delta in delta_values` This loop iterates through the range of delta values defined earlier. For each delta value, it will create a delta-epsilon band around the limit point. `x_range = np.linspace(x_limit - delta, x_limit + delta, 400)` This line creates an array $x_{\text{range}}\$ of x values that define a range around the limit point $x_{\text{limit}}\$ (which is 2 in our code) within the interval $\[x_{\text{limit}} - \delta  ,  x_{\text{limit}} + \delta]\$ This array is used to determine the x values over which the delta-epsilon band will be plotted. $x_{\text{limit}} - \delta\$ represents the lower bound of the interval. It subtracts the delta value from the limit point, creating the starting point of the range. $x_{\text{limit}} + \delta\$ represents the upper bound of the interval. It adds the delta value to the limit point, creating the ending point of the range. `epsilon = max(abs(f(x_range) - f(x_limit)))` This line calculates the maximum difference $\epsilon$ between the function values within the $x_{\text{range}}\$ and the function value at the limit point $x_{\text{limit}}\$ This calculated value of $\epsilon$ represents the vertical range of the delta-epsilon band that we're plotting around the limit point. `if f(x_limit) - epsilon <= f(x_limit) <= f(x_limit) + epsilon` This line checks whether the limit exists or not. According to the Epsilon-Delta definition, $\|f(x) - L| \leq \epsilon\$ can be simplified as $f(x) - \epsilon \leq L \leq f(x) + \epsilon\$ If this inequality holds true, then the limit exists. The color and label variables are assigned based on whether the limit exists or not. `plt.fill_between(x_range, f(x_limit) - epsilon, f(x_limit) + epsilon, color=color, alpha=0.2, label=label)` This line fills the area between $x_{\text{limit}} - \epsilon\$ and $x_{\text{limit}} + \epsilon\$ over the $x_{\text{range}}\$ interval. So, the width of the shaded region corresponds to the width of the interval around the limit point, which is controlled by the value of delta.
+
+```
+plt.xlabel('x')
+plt.ylabel('f(x)')
+plt.title('Epsilon-Delta Ratio for $f(x) = x^2$')
+plt.legend()
+plt.grid()
+plt.show()
+```
+This section of code is for adding labels, a title, a legend, and displaying the plot. `plt.xlabel('x')` This sets the label for the x-axis of the plot, indicating what the x-axis represents. `plt.ylabel('f(x)')` This sets the label for the y-axis of the plot, indicating what the y-axis represents. `plt.title('Epsilon-Delta Ratio for $f(x) = x^2$')` This sets the title of the plot. `plt.legend()` This adds a legend to the plot. The legend helps identify different elements on the plot, such as the function curve and the shaded delta-epsilon bands. `plt.grid()` This adds a grid to the plot. `plt.show()` This displays the plot on the screen.
