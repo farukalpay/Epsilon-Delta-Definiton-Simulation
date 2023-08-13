@@ -21,7 +21,7 @@ for delta in delta_values:
     epsilon = max(abs(f(x_range) - f(x_limit)))  # Calculate epsilon based on function behavior
     
     # Check if the limit point is inside the epsilon-delta band
-    if f(x_limit) - epsilon <= 5 <= f(x_limit) + epsilon:
+    if f(x_limit) - epsilon <= f(x_limit) <= f(x_limit) + epsilon:
         color = 'grey'
         label = f'Limit Exists for Δ = {delta:.2f}'
     else:
