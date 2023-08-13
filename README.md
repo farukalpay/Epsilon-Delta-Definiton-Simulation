@@ -1,5 +1,8 @@
 Introduction
 ---
+
+[![Hits](https://hits.sh/github.com/farukalpay/Epsilon-Delta-Definiton-Simulation/tree/main.svg)](https://hits.sh/github.com/farukalpay/Epsilon-Delta-Definiton-Simulation/tree/main/)
+
 $$\
 \forall \varepsilon > 0 \quad \exists \delta > 0 \quad 0 < |x - c| < \delta \Rightarrow |f(x) - L| < \varepsilon
 \$$
