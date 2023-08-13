@@ -1,10 +1,3 @@
-# Epsilon-Delta-Definiton-Simulation
-This project provides a visual simulation of the epsilon-delta ratio. Its purpose is to illustrate how the values of a function approach a specific limit point. 
-
-This simulation demonstrates the existence of the limit $\( \lim_{{x \to 2}} f(x) = 4 \)$ for the function $\( f(x) = x^2 \)$. As observed, when $\( L = 5 \)$, the rectangle we form using $\( L + \epsilon \)$, $\( L - \epsilon \)$ for $\( x \)$, and $\( x + \delta \)$, $\( x - \delta \)$ for $\( y \)$ values does not always contains the red point which is $L\$. This illustrates that for any chosen values of $\( \epsilon > 0\)$ there exist $\( \delta > 0\)$ such that $\( 0 < |f(x) - L| < \epsilon \)$ whenever $\( 0 < |x - c| < \delta \)$ 
-![](https://github.com/farukalpay/Epsilon-Delta-Ratio-Simulation/blob/main/images/1.png)
-![](https://github.com/farukalpay/Epsilon-Delta-Ratio-Simulation/blob/main/images/2.png)
-
 Introduction
 ---
 $$\
@@ -18,6 +11,14 @@ This mathematical notation defines the epsilon-delta definition of a limit.
 I have noticed that the majority of students find it challenging to feel this definition, which is crucial for calculus and real analysis. I'll make it easier for you to understand and feel by illustrating it graphically and by writing Python code.
 
 Before we begin, i highly advise you to watch my [Video](https://www.youtube.com/watch?v=qa1pWVE8L0I) to get a better understanding of the subject.
+
+Examples
+---
+This simulation demonstrates the existence of the limit $\( \lim_{{x \to 2}} f(x) = 4 \)$ for the function $\( f(x) = x^2 \)$. As observed, when $\( L = 5 \)$, the rectangle we form using $\( L + \epsilon \)$, $\( L - \epsilon \)$ for $\( x \)$, and $\( x + \delta \)$, $\( x - \delta \)$ for $\( y \)$ values always contains the red point which is $L\$. This illustrates that for any chosen values of $\( \epsilon > 0\)$ there exist $\( \delta > 0\)$ such that $\( 0 < |f(x) - L| < \epsilon \)$ whenever $\( 0 < |x - c| < \delta \)$ 
+![](https://github.com/farukalpay/Epsilon-Delta-Ratio-Simulation/blob/main/images/1.png)
+
+This simulation demonstrates that the limit $\( \lim_{{x \to 2}} f(x) = 5 \)$ does not exist for the function $\( f(x) = x^2 \)$. As observed, when $\( L = 4 \)$, the rectangle we form using $\( L + \epsilon \)$, $\( L - \epsilon \)$ for $\( x \)$, and $\( x + \delta \)$, $\( x - \delta \)$ for $\( y \)$ values does not always contains the red point which is $L\$. This illustrates that there exist $\( \delta > 0\)$ such that if $\( \epsilon > 0\)$ such that if $\( 0 < |f(x) - L| > \epsilon \)$ then $\( 0 < |x - c| > \delta \)$ 
+![](https://github.com/farukalpay/Epsilon-Delta-Ratio-Simulation/blob/main/images/2.png)
 
 Code Explanation
 ---
