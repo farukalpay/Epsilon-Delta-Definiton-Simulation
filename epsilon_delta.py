@@ -31,7 +31,7 @@ for delta in delta_values:
     plt.fill_between(x_range, f(x_limit) - epsilon, f(x_limit) + epsilon, color=color, alpha=0.2, label=label)
 
 # Highlight the limit point
-plt.plot(x_limit, 5, 'ro', label=f'x = {x_limit}, L = {f(x_limit)}')
+plt.plot(x_limit, f(x_limit), 'ro', label=f'x = {x_limit}, L = {f(x_limit)}')
 
 # Add labels and legend
 plt.xlabel('x')
